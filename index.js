@@ -187,7 +187,7 @@ async function run() {
       }
     });
 
-    
+    // ===================== UPDATE IDEA =====================
     app.put("/ideas/:id", async (req, res) => {
       try {
         const { id } = req.params;
@@ -232,7 +232,7 @@ async function run() {
       }
     });
 
-    // ===================== INTERACTIONS =====================
+    
     app.get("/my-interactions", async (req, res) => {
       try {
         const ideas = await ideasCollection
