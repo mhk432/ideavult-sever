@@ -83,7 +83,7 @@ async function run() {
       }
     });
 
-   
+    // ===================== GET SINGLE IDEA =====================
     app.get("/ideas/:id", async (req, res) => {
       try {
         const { id } = req.params;
@@ -98,7 +98,7 @@ async function run() {
       }
     });
 
-    // ===================== GET COMMENTS (FIXED - IMPORTANT) =====================
+   
     app.get("/ideas/:id/comments", async (req, res) => {
       try {
         const { id } = req.params;
