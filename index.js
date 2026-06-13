@@ -115,7 +115,7 @@ async function run() {
       }
     });
 
-   
+    // ===================== ADD COMMENT =====================
     app.post("/ideas/:id/comments", async (req, res) => {
       try {
         const { id } = req.params;
@@ -143,7 +143,7 @@ async function run() {
       }
     });
 
-    // ===================== UPDATE COMMENT =====================
+
     app.put("/ideas/:ideaId/comments/:commentId", async (req, res) => {
       try {
         const { ideaId, commentId } = req.params;
