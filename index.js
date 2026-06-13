@@ -28,7 +28,7 @@ async function run() {
 
     console.log("MongoDB connected!");
 
-    // ===================== GET ALL IDEAS =====================
+  
     app.get("/ideas", async (req, res) => {
       try {
         const { search, category, startDate, endDate, limit } = req.query;
