@@ -67,7 +67,7 @@ async function run() {
       }
     });
 
-    
+    // ===================== POST IDEA =====================
     app.post("/ideas", async (req, res) => {
       try {
         const idea = {
@@ -83,7 +83,7 @@ async function run() {
       }
     });
 
-    // ===================== GET SINGLE IDEA =====================
+   
     app.get("/ideas/:id", async (req, res) => {
       try {
         const { id } = req.params;
