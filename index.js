@@ -143,7 +143,7 @@ async function run() {
       }
     });
 
-
+    // ===================== UPDATE COMMENT =====================
     app.put("/ideas/:ideaId/comments/:commentId", async (req, res) => {
       try {
         const { ideaId, commentId } = req.params;
@@ -167,7 +167,7 @@ async function run() {
       }
     });
 
-    // ===================== DELETE COMMENT (ONLY ONE VERSION) =====================
+    
     app.delete("/ideas/:ideaId/comments/:commentId", async (req, res) => {
       try {
         const { ideaId, commentId } = req.params;
