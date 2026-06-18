@@ -220,18 +220,24 @@ async function run() {
     });
 
     // ===================== MY IDEAS =====================
-    app.get("/my-ideas", async (req, res) => {
-      try {
-        const result = await ideasCollection
-          .find({ userId: "my-self" })
-          .sort({ _id: -1 })
-          .toArray();
+   app.get("/my-ideas", async (req, res) => {
+  try {
+    const { userId } = req.query;
 
-        res.json(result);
-      } catch (error) {
-        res.status(500).json([]);
-      }
-    });
+    if (!userId) {
+      return res.json([]);
+    }
+
+    const result = await ideasCollection
+      .find({  userId: userId  })
+      .sort({ _id: -1 })
+      .toArray();
+
+    res.json(result);
+  } catch (error) {
+    res.status(500).json([]);
+  }
+});
 
     
     app.get("/my-interactions", async (req, res) => {
