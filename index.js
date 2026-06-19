@@ -22,12 +22,12 @@ const client = new MongoClient(process.env.MONGODB_URI, {
 
 async function run() {
   try {
-    await client.connect();
+    // await client.connect();
 
     const db = client.db("ideavault");
     const ideasCollection = db.collection("ideas");
 
-    console.log("MongoDB connected!");
+    // console.log("MongoDB connected!");
 
     // ===================== GET ALL IDEAS =====================
     app.get("/ideas", async (req, res) => {
